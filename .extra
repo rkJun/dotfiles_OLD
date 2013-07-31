@@ -1,0 +1,13 @@
+# add My Extra Style
+# author : @rkJun
+
+# path override setting for new git 
+export PATH="/usr/local/bin:$PATH"
+
+# add alias
+alias ll='ls -la -G'
+
+# If possible, add tab completion for many more commands
+[ -f /usr/local/etc/bash_completion.d/git-completion.bash ] && source /usr/local/etc/bash_completion.d/git-completion.bash
+[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ] && source /usr/local/etc/bash_completion.d/git-prompt.sh
+
