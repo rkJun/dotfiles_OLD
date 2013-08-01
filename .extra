@@ -15,9 +15,18 @@ export PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 # extra alias
 alias ll="ls -la ${colorflag}"
+alias pg='ps -afe|grep -v grep|grep'
+alias q='quit'
+alias quit='exit'
+alias simplesv='python -m SimpleHTTPServer'
 alias whois2="whois -h whois-servers.net"
+
+# extra alias personal
+alias compMyImg='hdiutil compact /Users/`whoami`/Documents/`whoami`Only.sparsebundle'
+alias ejectHdd='find /Volumes/Leto_1TB/ "._*" -exec rm {} \;;hdiutil eject /dev/disk1s1'
+alias rm_hdn_all="cd /Volumes/Leto_1TB && find ./ -name ._\* -exec rm {} \; && find ./ -name .DS_Store -exec rm {} \; && find ./ -name .\* && cd -"
 
 # If possible, add tab completion for many more commands
 [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] && source /usr/local/etc/bash_completion.d/git-completion.bash
 [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ] && source /usr/local/etc/bash_completion.d/git-prompt.sh
-
+source `brew --repository`/Library/Contributions/brew_bash_completion.sh

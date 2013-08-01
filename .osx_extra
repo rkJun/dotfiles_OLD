@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# ~/.osx_extra — extra of http://mths.be/osx 
+
+# Mission Control 2x fast
+defaults write com.apple.dock expose-animation-duration -float 0.15;killall Dock
+# Mission Control Max Speed
+##defaults write com.apple.dock expose-animation-duration -float 0;killall Dock
+# original 
+##defaults delete com.apple.dock expose-animation-duration;killall Dock
+
+
+# 4 finger Recently Desktop  Jump
+##defaults write com.apple.dock double-tap-jump-back -bool TRUE;killall Dock
+# original restore
+##defaults delete com.apple.dock double-tap-jump-back;killall Dock
+ 
+#Quick Loock TextSelection True
+##defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder
+#Restore
+##defaults delete com.apple.finder QLEnableTextSelection;killall Finder
+ 
+#dashboard disabled
+#defaults write com.apple.dashboard mcx-disabled -boolean YES;killall Dock 
+ 
+#NOT generate .DS_Store file in AFP or Network
+#defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+ 
+ 
+#CMD+H Hidden but, visibled in Dock
+#defaults write com.apple.Dock showhidden -bool YES && killall Dock
+#defaults delete com.apple.Dock showhidden && killall Dock
+ 
+#finder PathBarTootAtHome
+#defaults write com.apple.finder PathBarRootAtHome -bool yes;killall Finder
+#defaults delete com.apple.finder PathBarRootAtHome;killall Finder
+ 
+#faster mission control
+#defaults write com.apple.dock expose-animation-duration -float 0.15;killall Dock
+#defaults delete com.apple.dock expose-animation-duration;killall Dock
+ 
+#dark menu in full screen
+#defaults write -g NSFullScreenDarkMenu -bool TRUE
+#defaults delete -g NSFullScreenDarkMenu #original
