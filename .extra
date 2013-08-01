@@ -1,15 +1,23 @@
+# add My Extra Style
+# author : @rkJun
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Juntai Park"
+GIT_AUTHOR_NAME="rkJun"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="juntai81@gmail.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
+# path override setting for new git 
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+
 # extra alias
 alias ll="ls -la ${colorflag}"
 alias whois2="whois -h whois-servers.net"
 
-# overriding path (bacause use git from brew)
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+# If possible, add tab completion for many more commands
+[ -f /usr/local/etc/bash_completion.d/git-completion.bash ] && source /usr/local/etc/bash_completion.d/git-completion.bash
+[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ] && source /usr/local/etc/bash_completion.d/git-prompt.sh
+
