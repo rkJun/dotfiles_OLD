@@ -19,7 +19,7 @@ alias pg='ps -afe|grep -v grep|grep'
 alias q='quit'
 alias quit='exit'
 alias simplesv='python -m SimpleHTTPServer'
-alias whois2="whois -h whois-servers.net"
+alias whois2="whois -h whois.co.kr"
 
 # extra alias personal
 alias compMyImg='hdiutil compact /Users/`whoami`/Documents/`whoami`Only.sparsebundle'
