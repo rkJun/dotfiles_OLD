@@ -14,11 +14,6 @@ alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias v="vim"
-alias m="mate ."
-alias s="subl ."
-alias o="open"
-alias oo="open ."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -139,3 +134,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
